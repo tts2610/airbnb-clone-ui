@@ -1,0 +1,54 @@
+[{
+        "images": ["https://a0.muscache.com/im/pictures/b90c8b02-c808-4fdb-ba2f-30b16f5a7364.jpg?aki_policy=exp_md"],
+        "averageRating": 1.5,
+        "nRating": 2,
+        "tags": ["5ef5ace7dd245f1c6efced30", "5ef5ace7dd245f1c6efced31"],
+        "_id": "5efadb0ba66f523e781a41054466",
+        "title": "Comming soon: Cook with David Chang",
+        "location": "United States",
+        "userId": "5ef8db2706f49c5f4b78b87d",
+        "createdAt": "2020-06-30T06:26:19.908Z",
+        "updatedAt": "2020-06-30T07:17:18.334Z",
+        "price": "100",
+        "duration": "1 hour",
+        "__v": 0
+    },
+    {
+        "images": [
+            "https://a0.muscache.com/im/pictures/lombard/MtTemplate-1746293-media_library/original/5c2fdc86-6f16-4ad2-8788-372ff85a4113.jpeg?aki_policy=exp_md",
+            "https://a0.muscache.com/im/pictures/lombard/MtTemplate-1746293-media_library/original/75578928-27fe-4055-bc50-5ee36ffae190.jpeg?aki_policy=exp_md",
+            "https://a0.muscache.com/im/pictures/lombard/MtTemplate-1746293-media_library/original/318f6b61-4fb4-4675-9868-ebe89fc9184b.jpeg?aki_policy=exp_md",
+            "https://a0.muscache.com/im/pictures/778ba7f4-8a60-4db0-9e45-db87d879cf3f.jpg?aki_policy=exp_md",
+            "https://a0.muscache.com/im/pictures/lombard/MtTemplate-1746293-media_library/original/eaea1452-997c-4164-8396-cdfa8c247e52.jpeg?aki_policy=exp_md"
+        ],
+        "averageRating": 1.5,
+        "nRating": 2,
+        "tags": ["Cooking", "Class"],
+        "languages": ["English", "Japan"],
+        "description": "",
+        "_id": "5efadb0ba66f523e781a4105",
+        "title": "Michelin Chef Cristina's Roman Cuisine",
+        "location": "Italy",
+        "userId": "5ef8db2706f49c5f4b78b87d",
+        "createdAt": "2020-06-30T06:26:19.908Z",
+        "updatedAt": "2020-06-30T07:17:18.334Z",
+        "price": "70",
+        "duration": "1 hour",
+        "__v": 0
+    },
+    {
+        "images": ["https://a0.muscache.com/im/pictures/lombard/MtTemplate-1836036-media_library/original/9014e291-7c51-4730-b1d6-a7686608ddc8.jpeg?aki_policy=exp_md", "2.png", "3.png"],
+        "averageRating": 1.5,
+        "nRating": 2,
+        "tags": ["5ef5ace7dd245f1c6efced30", "5ef5ace7dd245f1c6efced31"],
+        "_id": "5efadb0ba66f523e781wereea4105",
+        "title": "COMING SOON: Cook with Ed Lee",
+        "location": "United States",
+        "userId": "5ef8db2706f49c5f4b78b87d",
+        "createdAt": "2020-06-30T06:26:19.908Z",
+        "updatedAt": "2020-06-30T07:17:18.334Z",
+        "price": "100",
+        "duration": "1 hour",
+        "__v": 0
+    }
+]

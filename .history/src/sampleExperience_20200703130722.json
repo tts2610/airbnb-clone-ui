@@ -1,0 +1,67 @@
+[{
+        "images": ["https://a0.muscache.com/im/pictures/b90c8b02-c808-4fdb-ba2f-30b16f5a7364.jpg?aki_policy=exp_md"],
+        "averageRating": 1.5,
+        "nRating": 2,
+        "tags": ["5ef5ace7dd245f1c6efced30", "5ef5ace7dd245f1c6efced31"],
+        "_id": "5efadb0ba66f523e781a41054466",
+        "title": "Comming soon: Cook with David Chang",
+        "location": "United States",
+        "userId": "5ef8db2706f49c5f4b78b87d",
+        "createdAt": "2020-06-30T06:26:19.908Z",
+        "updatedAt": "2020-06-30T07:17:18.334Z",
+        "price": "100",
+        "duration": "1 hour",
+        "__v": 0
+    },
+    {
+        "images": [
+            "https://a0.muscache.com/im/pictures/lombard/MtTemplate-1746293-media_library/original/5c2fdc86-6f16-4ad2-8788-372ff85a4113.jpeg?aki_policy=exp_md",
+            "https://a0.muscache.com/im/pictures/lombard/MtTemplate-1746293-media_library/original/75578928-27fe-4055-bc50-5ee36ffae190.jpeg?aki_policy=exp_md",
+            "https://a0.muscache.com/im/pictures/lombard/MtTemplate-1746293-media_library/original/318f6b61-4fb4-4675-9868-ebe89fc9184b.jpeg?aki_policy=exp_md",
+            "https://a0.muscache.com/im/pictures/778ba7f4-8a60-4db0-9e45-db87d879cf3f.jpg?aki_policy=exp_md",
+            "https://a0.muscache.com/im/pictures/lombard/MtTemplate-1746293-media_library/original/eaea1452-997c-4164-8396-cdfa8c247e52.jpeg?aki_policy=exp_md"
+        ],
+        "averageRating": 1.5,
+        "nRating": 2,
+        "tags": ["Cooking", "Class"],
+        "languages": ["English", "Japan"],
+        "description": "Chef Cristina Bowerman is not your typical Italian chef. You're about to meet the woman that revolutionized (and modernized) Roman haute cuisine herself! Her cooking style opens up a conversation between modernity and tradition; she has figured out a way of mixing her background as a designer, and her travels around the world in order to bring back to Rome a fresher, funkier and funnier approach to the Roman traditional cuisine that she so deeply loves at Glass Hostaria.
+
+            In her first Online Experience,
+        you willget the opportunity to watch,
+        learn,
+        and connect with Chef Cristina as she takes you on an unconventional culinary journey to the heart of Trastevere!
+
+        In this Masterclass,
+        you will not onlyget to discover the inspirations and techniques behind her widely recognized signature dishes,
+        but you will also be able to learn how to recreate these original Southern Italian recipes at the comfort of your home.
+
+        In order to sample the heart and soul of what makes Italian food so loved,
+        Chef Cristina will focus on teaching you how to work with seasonal vegetables,
+        fish and seafood alongside some of her favorite pasta staples.Let her have you fall in love with Italian food all over again!",
+        "_id": "5efadb0ba66f523e781a4105",
+        "title": "Michelin Chef Cristina's Roman Cuisine",
+        "location": "Italy",
+        "userId": "5ef8db2706f49c5f4b78b87d",
+        "createdAt": "2020-06-30T06:26:19.908Z",
+        "updatedAt": "2020-06-30T07:17:18.334Z",
+        "price": "70",
+        "duration": "1 hour",
+        "__v": 0
+    },
+    {
+        "images": ["https://a0.muscache.com/im/pictures/lombard/MtTemplate-1836036-media_library/original/9014e291-7c51-4730-b1d6-a7686608ddc8.jpeg?aki_policy=exp_md", "2.png", "3.png"],
+        "averageRating": 1.5,
+        "nRating": 2,
+        "tags": ["5ef5ace7dd245f1c6efced30", "5ef5ace7dd245f1c6efced31"],
+        "_id": "5efadb0ba66f523e781wereea4105",
+        "title": "COMING SOON: Cook with Ed Lee",
+        "location": "United States",
+        "userId": "5ef8db2706f49c5f4b78b87d",
+        "createdAt": "2020-06-30T06:26:19.908Z",
+        "updatedAt": "2020-06-30T07:17:18.334Z",
+        "price": "100",
+        "duration": "1 hour",
+        "__v": 0
+    }
+]

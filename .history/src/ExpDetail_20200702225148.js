@@ -1,0 +1,28 @@
+import React from "react";
+import { useParams } from "react-router-dom";
+import { Container, Row, Col } from "react-bootstrap";
+
+import data from "./sampleExperience.json";
+
+export default function ExpDetail() {
+  let { expId } = useParams();
+  return (
+    <>
+      <div style={{ backgroundColor: "black", height: "70vh" }}>
+        <Container>
+          <Row>
+            <Col>
+              <img alt="" src={data[0].images[0]} width="340" height="450"></img>
+            </Col>
+          </Row>
+
+          <img alt="" src={data[0].images[2]}></img>
+
+          <img alt="" src={data[0].images[3]}></img>
+
+          <img alt="" src={data[0].images[4]}></img>
+        </Container>
+      </div>
+    </>
+  );
+}

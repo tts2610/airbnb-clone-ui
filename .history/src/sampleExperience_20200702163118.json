@@ -1,0 +1,30 @@
+[{
+        "images": ["1.png", "2.png", "3.png"],
+        "averageRating": 1.5,
+        "nRating": 2,
+        "tags": ["5ef5ace7dd245f1c6efced30", "5ef5ace7dd245f1c6efced31"],
+        "_id": "5efadb0ba66f523e781a4105",
+        "title": "Comming soon: Cook with David Chang",
+        "location": "United States",
+        "userId": "5ef8db2706f49c5f4b78b87d",
+        "createdAt": "2020-06-30T06:26:19.908Z",
+        "updatedAt": "2020-06-30T07:17:18.334Z",
+        "price": "100",
+        "duration": "1 hour",
+        "__v": 0
+    },
+    {
+        "images": ["1.png", "2.png", "3.png"],
+        "averageRating": 1.5,
+        "nRating": 2,
+        "tags": ["5ef5ace7dd245f1c6efced30", "5ef5ace7dd245f1c6efced31"],
+        "_id": "5efadb0ba66f523e781a4105",
+        "title": "Michelin Chef Cristina's Roman Cuisine",
+        "location": "Italy",
+        "userId": "5ef8db2706f49c5f4b78b87d",
+        "createdAt": "2020-06-30T06:26:19.908Z",
+        "updatedAt": "2020-06-30T07:17:18.334Z",
+        "price": "70",
+        "__v": 0
+    }
+]

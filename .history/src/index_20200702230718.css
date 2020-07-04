@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    font-family: "Nunito", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.card {
+    border: none !important;
+}
+
+.card-img-top {
+    height: 350px !important;
+}
+
+.card-body {
+    text-align: left;
+}
+
+.cardTitle {
+    font-weight: bold;
+}
+
+.padding-0 {
+    padding-right: 0;
+    padding-left: 0;
+}
