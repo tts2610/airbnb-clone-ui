@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Row, Badge, Col } from "react-bootstrap";
+import { Card, Button, Row, Badge, Col } from "react-bootstrap";
 
 export default function ExpCard({ title, price, location, images, _id }) {
   return (
