@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-// import { useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import data from "./sampleExperience.json";
 import MyStackGrid from "./components/expDetail/MyStackGrid";
