@@ -14,10 +14,9 @@ export default function Filters({ languageFilterList }) {
     console.log(newLangList);
     setLanguages(newLangList);
     settimeOfDay([
-      { name: "Morning - Before 12 pm", id: 1 },
-      { name: "Afternoon - After 12 pm", id: 2 },
-      { name: "Evening - After 5 pm", id: 3 },
-    ]);
+    { name: "Morning - Before 12 pm", id: 1 },
+    { name: "Afternoon - After 12 pm", id: 2 },
+    { name: "Evening - After 5 pm", id: 3 })
   }, [languageFilterList]);
   const [selectedOption, setSelected] = useState([]);
   const handleChange = () => {
