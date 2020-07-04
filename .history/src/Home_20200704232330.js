@@ -11,7 +11,7 @@ import SignupModal from "./components/signup/SignupModal";
 import axios from "axios";
 import Filters from "./components/common/Filters";
 import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+import "react-multi-carousel/lib/style.css";
 
 export default class Home extends Component {
   state = {
@@ -100,7 +100,7 @@ export default class Home extends Component {
         <CustomNavbar handleShow={this.handleShow} />
         <CustomJumbotron />
         <Filters />
-        <Container className="mt-5">
+        <Container>
           <Carousel
             additionalTransfrom={0}
             arrows
@@ -123,7 +123,7 @@ export default class Home extends Component {
                   max: 3000,
                   min: 1024,
                 },
-                items: 5,
+                items: 3,
                 partialVisibilityGutter: 40,
               },
               mobile: {
@@ -147,12 +147,13 @@ export default class Home extends Component {
             sliderClass=""
             slidesToSlide={1}
             swipeable>
+            {" "}
             {data.map((item, idx) => (
               <ExpCard key={idx} {...item} />
-            ))}
+            ))}{" "}
           </Carousel>
           <CustomizeFooter />
-        </Container>
+        </Container>{" "}
         <LoginModal show={this.state.showLogin} handleClose={this.handleClose} loginUser={this.loginUser} showSpinner={this.state.showLoginSpinner} error={this.state.errorLogin} />
         <SignupModal show={this.state.showSignUp} handleClose={this.handleClose} signUpUser={this.signUpUser} showSpinner={this.state.showSignUpSpinner} error={this.state.errorSignUp} />
       </>

@@ -100,7 +100,7 @@ export default class Home extends Component {
         <CustomNavbar handleShow={this.handleShow} />
         <CustomJumbotron />
         <Filters />
-        <Container className="mt-5">
+        <Container className="mt-3">
           <Carousel
             additionalTransfrom={0}
             arrows
@@ -123,7 +123,7 @@ export default class Home extends Component {
                   max: 3000,
                   min: 1024,
                 },
-                items: 5,
+                items: 3,
                 partialVisibilityGutter: 40,
               },
               mobile: {

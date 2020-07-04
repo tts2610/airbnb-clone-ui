@@ -112,9 +112,5 @@ body {
 }
 
 .multi-select {
-    width: 250px;
-}
-
-.optionContainer li:hover {
-    background-color: lightgrey !important;
+    width: inherit;
 }

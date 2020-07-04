@@ -11,8 +11,25 @@ import SignupModal from "./components/signup/SignupModal";
 import axios from "axios";
 import Filters from "./components/common/Filters";
 import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
-
+const responsive = {
+  superLargeDesktop: {
+    // the naming can be any, depends on you.
+    breakpoint: { max: 4000, min: 3000 },
+    items: 5
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 3
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 2
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1
+  }
+};
 export default class Home extends Component {
   state = {
     showLogin: false,
@@ -100,8 +117,15 @@ export default class Home extends Component {
         <CustomNavbar handleShow={this.handleShow} />
         <CustomJumbotron />
         <Filters />
-        <Container className="mt-5">
-          <Carousel
+        <Container>
+        
+<Carousel responsive={responsive}>
+  <div>Item 1</div>
+  <div>Item 2</div>
+  <div>Item 3</div>
+  <div>Item 4</div>
+</Carousel>;
+          {/* <Carousel
             additionalTransfrom={0}
             arrows
             autoPlaySpeed={3000}
@@ -123,7 +147,7 @@ export default class Home extends Component {
                   max: 3000,
                   min: 1024,
                 },
-                items: 5,
+                items: 3,
                 partialVisibilityGutter: 40,
               },
               mobile: {
@@ -147,12 +171,14 @@ export default class Home extends Component {
             sliderClass=""
             slidesToSlide={1}
             swipeable>
-            {data.map((item, idx) => (
+            {" "}
+            {/* {data.map((item, idx) => (
               <ExpCard key={idx} {...item} />
-            ))}
-          </Carousel>
+            ))}{" "} */}
+            <div>1</div>
+          </Carousel> */}
           <CustomizeFooter />
-        </Container>
+        </Container>{" "}
         <LoginModal show={this.state.showLogin} handleClose={this.handleClose} loginUser={this.loginUser} showSpinner={this.state.showLoginSpinner} error={this.state.errorLogin} />
         <SignupModal show={this.state.showSignUp} handleClose={this.handleClose} signUpUser={this.signUpUser} showSpinner={this.state.showSignUpSpinner} error={this.state.errorSignUp} />
       </>

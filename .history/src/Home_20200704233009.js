@@ -100,8 +100,9 @@ export default class Home extends Component {
         <CustomNavbar handleShow={this.handleShow} />
         <CustomJumbotron />
         <Filters />
-        <Container className="mt-5">
+        <Container>
           <Carousel
+            className="mt-3"
             additionalTransfrom={0}
             arrows
             autoPlaySpeed={3000}
@@ -123,7 +124,7 @@ export default class Home extends Component {
                   max: 3000,
                   min: 1024,
                 },
-                items: 5,
+                items: 3,
                 partialVisibilityGutter: 40,
               },
               mobile: {

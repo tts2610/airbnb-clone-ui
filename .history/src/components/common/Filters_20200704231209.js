@@ -40,7 +40,7 @@ export default function Filters() {
           // onRemove={this.onRemove}
           displayValue="name"
           showCheckbox={true}
-          placeholder="Language offered"
+          placeholder="Interest"
           closeOnSelect={false}
           avoidHighlightFirstOption={true}
           // style={{ chips: { background: "red" } }}

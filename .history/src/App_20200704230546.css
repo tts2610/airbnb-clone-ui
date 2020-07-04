@@ -115,6 +115,6 @@ body {
     width: 250px;
 }
 
-.optionContainer li:hover {
-    background-color: lightgrey !important;
+a:hover {
+    color: black;
 }

@@ -16,7 +16,7 @@ export default function Filters() {
     setSelected(selectedOption);
   };
   return (
-    <Container style={{ display: "flex", justifyContent: "space-between" }}>
+    <Container style={{ display: "flex" }}>
       <div>
         <Multiselect
           options={option}
@@ -40,7 +40,7 @@ export default function Filters() {
           // onRemove={this.onRemove}
           displayValue="name"
           showCheckbox={true}
-          placeholder="Language offered"
+          placeholder="Interest"
           closeOnSelect={false}
           avoidHighlightFirstOption={true}
           // style={{ chips: { background: "red" } }}

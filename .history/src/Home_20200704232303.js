@@ -11,7 +11,7 @@ import SignupModal from "./components/signup/SignupModal";
 import axios from "axios";
 import Filters from "./components/common/Filters";
 import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+import "react-multi-carousel/lib/style.css";
 
 export default class Home extends Component {
   state = {
@@ -100,59 +100,15 @@ export default class Home extends Component {
         <CustomNavbar handleShow={this.handleShow} />
         <CustomJumbotron />
         <Filters />
-        <Container className="mt-5">
-          <Carousel
-            additionalTransfrom={0}
-            arrows
-            autoPlaySpeed={3000}
-            centerMode={false}
-            className=""
-            containerClass="container-with-dots"
-            dotListClass=""
-            draggable
-            focusOnSelect={false}
-            infinite
-            itemClass=""
-            keyBoardControl
-            minimumTouchDrag={80}
-            renderButtonGroupOutside={false}
-            renderDotsOutside={false}
-            responsive={{
-              desktop: {
-                breakpoint: {
-                  max: 3000,
-                  min: 1024,
-                },
-                items: 5,
-                partialVisibilityGutter: 40,
-              },
-              mobile: {
-                breakpoint: {
-                  max: 464,
-                  min: 0,
-                },
-                items: 1,
-                partialVisibilityGutter: 30,
-              },
-              tablet: {
-                breakpoint: {
-                  max: 1024,
-                  min: 464,
-                },
-                items: 2,
-                partialVisibilityGutter: 30,
-              },
-            }}
-            showDots={false}
-            sliderClass=""
-            slidesToSlide={1}
-            swipeable>
+        <Container>
+          <CardDeck className="mt-3">
+            {" "}
             {data.map((item, idx) => (
               <ExpCard key={idx} {...item} />
-            ))}
-          </Carousel>
+            ))}{" "}
+          </CardDeck>{" "}
           <CustomizeFooter />
-        </Container>
+        </Container>{" "}
         <LoginModal show={this.state.showLogin} handleClose={this.handleClose} loginUser={this.loginUser} showSpinner={this.state.showLoginSpinner} error={this.state.errorLogin} />
         <SignupModal show={this.state.showSignUp} handleClose={this.handleClose} signUpUser={this.signUpUser} showSpinner={this.state.showSignUpSpinner} error={this.state.errorSignUp} />
       </>

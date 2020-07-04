@@ -123,7 +123,7 @@ export default class Home extends Component {
                   max: 3000,
                   min: 1024,
                 },
-                items: 5,
+                items: 3,
                 partialVisibilityGutter: 40,
               },
               mobile: {

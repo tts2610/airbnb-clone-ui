@@ -16,7 +16,7 @@ export default function Filters() {
     setSelected(selectedOption);
   };
   return (
-    <Container style={{ display: "flex", justifyContent: "space-between" }}>
+    <Container style={{ display: "flex" }}>
       <div>
         <Multiselect
           options={option}
@@ -32,21 +32,20 @@ export default function Filters() {
           closeIcon="close"
         />
       </div>
-      <div>
-        <Multiselect
-          options={option}
-          selectedValues={selectedOption}
-          onSelect={handleChange}
-          // onRemove={this.onRemove}
-          displayValue="name"
-          showCheckbox={true}
-          placeholder="Language offered"
-          closeOnSelect={false}
-          avoidHighlightFirstOption={true}
-          // style={{ chips: { background: "red" } }}
-          closeIcon="close"
-        />
-      </div>
+
+      <Multiselect
+        options={option}
+        selectedValues={selectedOption}
+        onSelect={handleChange}
+        // onRemove={this.onRemove}
+        displayValue="name"
+        showCheckbox={true}
+        placeholder="Interest"
+        closeOnSelect={false}
+        avoidHighlightFirstOption={true}
+        // style={{ chips: { background: "red" } }}
+        closeIcon="close"
+      />
     </Container>
   );
 }
