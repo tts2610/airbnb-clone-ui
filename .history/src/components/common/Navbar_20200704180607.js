@@ -60,13 +60,13 @@ export default function CustomNavbar({ handleShow }) {
         </Navbar.Collapse>
       </Navbar> */}
 
-      <Navbar fixed="top" expand="lg" style={{ display: "flex", textAlign: "center", justifyContent: "space-between", background: "rgba(0,0,0,0.1)" }}>
+      <Navbar fixed="top" bg="light" expand="lg" style={{ display: "flex", textAlign: "center", justifyContent: "space-between", background: "rgba(0,0,0,0.1)" }}>
         <Navbar.Brand href="/" style={{ color: "rgb(245, 89, 95)", display: "flex", alignItems: "center" }}>
           <img alt="" src="/icon.png" width="40" height="40" /> <h3 className="ml-2">airbnb</h3>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="links">
+          <Nav className="mr-auto">
             <Nav.Link href="">Host an experience</Nav.Link>
             {localStorage.getItem(process.env.REACT_APP_LOCAL_STORAGE_USER_EMAIL) ? (
               <NavDropdown title={localStorage.getItem(process.env.REACT_APP_LOCAL_STORAGE_USER_EMAIL)} id="basic-nav-dropdown">
@@ -89,6 +89,10 @@ export default function CustomNavbar({ handleShow }) {
               </>
             )}
           </Nav>
+          <Form inline>
+            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+            <Button variant="outline-success">Search</Button>
+          </Form>
         </Navbar.Collapse>
       </Navbar>
     </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from "react-bootstrap";
+import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
 export default function CustomNavbar({ handleShow }) {
@@ -27,47 +27,14 @@ export default function CustomNavbar({ handleShow }) {
   };
   return (
     <div>
-      {/* <Navbar fixed="top" style={{ display: "flex", textAlign: "center", justifyContent: "space-between", background: "rgba(0,0,0,0.1)" }}>
+      <Navbar bg="dark" expand="lg">
         <Navbar.Brand href="/" style={{ color: "rgb(245, 89, 95)", display: "flex", alignItems: "center" }}>
           <img alt="" src="/icon.png" width="40" height="40" /> <h3 className="ml-2">airbnb</h3>
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link href="">Host an experience</Nav.Link>
 
-            {localStorage.getItem(process.env.REACT_APP_LOCAL_STORAGE_USER_EMAIL) ? (
-              <NavDropdown title={localStorage.getItem(process.env.REACT_APP_LOCAL_STORAGE_USER_EMAIL)} id="basic-nav-dropdown">
-                <NavDropdown.Item href="#" onClick={() => history.push("/404")}>
-                  User Info
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#" onClick={signOut}>
-                  Sign out
-                </NavDropdown.Item>
-              </NavDropdown>
-            ) : (
-              <>
-                <div onClick={(e) => handleShow(e, "login")}>
-                  <Nav.Link href="#">Login</Nav.Link>
-                </div>
-                <div onClick={(e) => handleShow(e, "signup")}>
-                  <Nav.Link href="#">Sign up</Nav.Link>
-                </div>
-              </>
-            )}
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar> */}
-
-      <Navbar fixed="top" expand="lg" style={{ display: "flex", textAlign: "center", justifyContent: "space-between", background: "rgba(0,0,0,0.1)" }}>
-        <Navbar.Brand href="/" style={{ color: "rgb(245, 89, 95)", display: "flex", alignItems: "center" }}>
-          <img alt="" src="/icon.png" width="40" height="40" /> <h3 className="ml-2">airbnb</h3>
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="links">
-            <Nav.Link href="">Host an experience</Nav.Link>
             {localStorage.getItem(process.env.REACT_APP_LOCAL_STORAGE_USER_EMAIL) ? (
               <NavDropdown title={localStorage.getItem(process.env.REACT_APP_LOCAL_STORAGE_USER_EMAIL)} id="basic-nav-dropdown">
                 <NavDropdown.Item href="#" onClick={() => history.push("/404")}>

@@ -102,7 +102,3 @@ body {
 .navbar .links div .dropdown-item {
     color: black !important;
 }
-
-#basic-navbar-nav {
-    justify-content: flex-end;
-}

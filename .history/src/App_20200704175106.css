@@ -71,9 +71,10 @@ body {
     font-weight: 250;
 }
 
-.container {
+
+/* .container {
     max-width: 1600px !important;
-}
+} */
 
 .navbar .links a.nav-link {
     color: white !important;
@@ -101,8 +102,4 @@ body {
 
 .navbar .links div .dropdown-item {
     color: black !important;
-}
-
-#basic-navbar-nav {
-    justify-content: flex-end;
 }
