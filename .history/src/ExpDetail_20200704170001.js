@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import data from "./sampleExperience.json";
@@ -8,9 +8,6 @@ import DetailHeader from "./components/expDetail/DetailHeader";
 export default function ExpDetail() {
   let { expId } = useParams();
   let exp = data.find((e) => e._id === "5efadb0ba66f523e781a4105");
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  });
   return (
     <div className="expDetail">
       <div className="py-5" style={{ backgroundColor: "black", padding: "15px", width: "100vw" }}>

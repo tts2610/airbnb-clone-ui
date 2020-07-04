@@ -1,6 +1,5 @@
 import React from "react";
 import { Card, Row, Badge, Col } from "react-bootstrap";
-import { Link } from "react-router-dom";
 
 export default function ExpCard({ title, price, location, images, _id }) {
   return (
@@ -25,7 +24,7 @@ export default function ExpCard({ title, price, location, images, _id }) {
             From $ {price}
             /person
           </Card.Text>
-          <Link to={"/exp/" + _id} className="stretched-link" />
+          <a href={"/exp/" + _id} className="stretched-link"></a>
         </Card.Body>
       </Card>
     </div>

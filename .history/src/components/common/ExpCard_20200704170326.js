@@ -25,7 +25,7 @@ export default function ExpCard({ title, price, location, images, _id }) {
             From $ {price}
             /person
           </Card.Text>
-          <Link to={"/exp/" + _id} className="stretched-link" />
+          <Link to={"/exp/" + _id} onClick={this.forceUpdate} className="stretched-link" />
         </Card.Body>
       </Card>
     </div>
