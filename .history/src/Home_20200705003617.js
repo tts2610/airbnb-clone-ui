@@ -54,6 +54,7 @@ export default class Home extends Component {
             containerClass="container-with-dots"
             dotListClass=""
             draggable
+            partialVisible
             focusOnSelect={false}
             infinite
             itemClass=""
@@ -95,7 +96,7 @@ export default class Home extends Component {
               <ExpCard key={idx} {...item} />
             ))}
           </Carousel>
-          <h1 className="my-3">Starting in the next 6 hours</h1>
+          <h1 className="mb-3">Starting in the next 6 hours</h1>
           <Carousel
             additionalTransfrom={0}
             arrows
@@ -105,6 +106,7 @@ export default class Home extends Component {
             containerClass="container-with-dots"
             dotListClass=""
             draggable
+            partialVisible
             focusOnSelect={false}
             infinite
             itemClass=""

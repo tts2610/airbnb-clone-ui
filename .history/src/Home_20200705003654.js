@@ -54,6 +54,7 @@ export default class Home extends Component {
             containerClass="container-with-dots"
             dotListClass=""
             draggable
+            partialVisible
             focusOnSelect={false}
             infinite
             itemClass=""
@@ -105,6 +106,7 @@ export default class Home extends Component {
             containerClass="container-with-dots"
             dotListClass=""
             draggable
+            partialVisible
             focusOnSelect={false}
             infinite
             itemClass=""

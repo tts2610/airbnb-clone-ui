@@ -123,3 +123,7 @@ body {
     top: 144px;
     /* background: white !important; */
 }
+
+#multiselectContainerReact {
+    width: auto;
+}

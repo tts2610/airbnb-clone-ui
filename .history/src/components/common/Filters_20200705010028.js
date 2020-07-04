@@ -4,9 +4,9 @@ import { Multiselect } from "multiselect-react-dropdown";
 
 export default function Filters({ languageFilterList }) {
   const [timeOfDay, settimeOfDay] = useState([
-    { name: "Morning - Before 12 pm", id: 1 },
-    { name: "Afternoon - After 12 pm", id: 2 },
-    { name: "Evening - After 5 pm", id: 3 },
+    { name: "Morning-before 12 pm", id: 1 },
+    { name: "Afternoon-after 12 pm", id: 2 },
+    { name: "Evening-after 5 pm", id: 3 },
   ]);
   const [language, setLanguages] = useState([]);
   useEffect(() => {
@@ -25,7 +25,7 @@ export default function Filters({ languageFilterList }) {
   return (
     <Container>
       <Row>
-        <Col sm={2} className="mt-2">
+        <Col sm={4}>
           <Multiselect
             options={language}
             selectedValues={selectedOption}
@@ -40,7 +40,7 @@ export default function Filters({ languageFilterList }) {
             closeIcon="close"
           />
         </Col>
-        <Col sm={2} className="mt-2">
+        <Col sm={4}>
           <Multiselect
             options={timeOfDay}
             selectedValues={selectedOption}
@@ -55,7 +55,7 @@ export default function Filters({ languageFilterList }) {
             closeIcon="close"
           />
         </Col>
-        <Col sm={2} className="mt-2">
+        <Col sm={2}>
           <Button variant="dark">Filter</Button>
         </Col>
       </Row>

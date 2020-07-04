@@ -4,7 +4,7 @@ import CustomNavbar from "./components/common/Navbar";
 import CustomJumbotron from "./components/common/Jumbotron";
 import data from "./sampleExperience.json";
 import ExpCard from "./components/common/ExpCard";
-import { Container } from "react-bootstrap";
+import { Container, Card, CardDeck } from "react-bootstrap";
 import CustomizeFooter from "./components/common/Footer";
 import LoginModal from "./components/login/LoginModal";
 import SignupModal from "./components/signup/SignupModal";
@@ -45,56 +45,11 @@ export default class Home extends Component {
         <Filters languageFilterList={this.state.languageFilterList} />
         <Container className="mt-5">
           <h1 className="mb-3">Cook with Award-Winning Chefs</h1>
-          <Carousel
-            additionalTransfrom={0}
-            arrows
-            autoPlaySpeed={3000}
-            centerMode={false}
-            className=""
-            containerClass="container-with-dots"
-            dotListClass=""
-            draggable
-            focusOnSelect={false}
-            infinite
-            itemClass=""
-            keyBoardControl
-            minimumTouchDrag={80}
-            renderButtonGroupOutside={false}
-            renderDotsOutside={false}
-            responsive={{
-              desktop: {
-                breakpoint: {
-                  max: 3000,
-                  min: 1024,
-                },
-                items: 5,
-                partialVisibilityGutter: 40,
-              },
-              mobile: {
-                breakpoint: {
-                  max: 464,
-                  min: 0,
-                },
-                items: 1,
-                partialVisibilityGutter: 30,
-              },
-              tablet: {
-                breakpoint: {
-                  max: 1024,
-                  min: 464,
-                },
-                items: 2,
-                partialVisibilityGutter: 30,
-              },
-            }}
-            showDots={false}
-            sliderClass=""
-            slidesToSlide={1}
-            swipeable>
+          <CardDeck>
             {data.map((item, idx) => (
               <ExpCard key={idx} {...item} />
             ))}
-          </Carousel>
+          </CardDeck>
           <h1 className="my-3">Starting in the next 6 hours</h1>
           <Carousel
             additionalTransfrom={0}
@@ -105,6 +60,7 @@ export default class Home extends Component {
             containerClass="container-with-dots"
             dotListClass=""
             draggable
+            partialVisible
             focusOnSelect={false}
             infinite
             itemClass=""

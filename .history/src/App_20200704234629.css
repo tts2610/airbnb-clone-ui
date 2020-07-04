@@ -121,5 +121,6 @@ body {
 
 .react-multiple-carousel__arrow {
     top: 144px;
-    /* background: white !important; */
+    background: white !important;
+    color: black !important;
 }

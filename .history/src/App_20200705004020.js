@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./Home";
 import ExpDetail from "./ExpDetail";
 import FourOhFourPage from "./FourOFour";
-import HomeFiltered from "./HomeFiltered";
 
 function App() {
   return (
