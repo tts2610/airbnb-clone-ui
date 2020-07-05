@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Modal, Button, Form, Badge, Spinner } from "react-bootstrap";
-// import axios from "axios";
+import axios from "axios";
 import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import Popout from "react-popout";
@@ -16,7 +16,6 @@ export default function LoginModal({ show, handleClose, loginUser, showSpinner, 
     //   console.log(res.data);
     // });
     setIsPoppedOut(true);
-    handleClose(null, "login");
   };
 
   const popoutClosed = () => {
