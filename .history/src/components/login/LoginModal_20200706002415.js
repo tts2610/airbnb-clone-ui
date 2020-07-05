@@ -8,11 +8,12 @@ export default function LoginModal({ show, handleClose, loginUser, showSpinner, 
   const navigator = useSelector((state) => state.navigator);
   let history = useHistory();
   const loginFB = () => {
-    const proxyurl = "https://cors-anywhere.herokuapp.com/";
-    const url = "https://cloneairbnb2020.herokuapp.com/auth/facebook/login";
-    axios.get(proxyurl + url).then((res) => {
-      console.log(res.data);
-    });
+    // const proxyurl = "https://cors-anywhere.herokuapp.com/";
+    // const url = "https://cloneairbnb2020.herokuapp.com/auth/facebook/login";
+    // axios.get(proxyurl + url).then((res) => {
+    //   console.log(res.data);
+    // });
+    history.replace("https://cloneairbnb2020.herokuapp.com/auth/facebook/login");
   };
 
   const [email, setEmail] = useState("");
