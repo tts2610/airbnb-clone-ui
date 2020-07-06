@@ -19,7 +19,8 @@
     "react-scripts": "3.4.1",
     "react-stack-grid": "^0.7.1",
     "reactjs-tag-input": "^2.0.15",
-    "redux": "^4.0.5"
+    "redux": "^4.0.5",
+    "rheostat": "^4.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
