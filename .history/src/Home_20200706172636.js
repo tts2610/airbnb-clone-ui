@@ -37,23 +37,7 @@ export default function Home() {
   const [activePage, setActivePage] = useState(1);
 
   const languages = useSelector((state) => state.languages);
-  const minPrice = useSelector((state) => state.minPrice);
-  const maxPrice = useSelector((state) => state.maxPrice);
-  // const shoudlRender = useState(false);
-  // const searchParams = {
-  //   minPrice: 0,
-  //   maxPrice: 0,
-  //   languages: [],
-  //   duration: 0
-  // }
 
-  // const performFilter = (params) => {
-  //   //API filter
-  // }
-
-  // useEffect(() => {
-  //   performFilter()
-  // }, [shoudlRender])
   const getLanguageList = (data) => {
     let arr = new Set();
     for (let index = 0; index < data.length; index++) {
@@ -73,6 +57,8 @@ export default function Home() {
   };
 
   const getFilteredUrl = () => {
+    const minPrice = useSelector((state) => state.minPrice);
+    const maxPrice = useSelector((state) => state.maxPrice);
     return process.env.REACT_APP_GET_EXP + `/search?priceMin=${minPrice}&priceMax=${maxPrice}`;
   };
 

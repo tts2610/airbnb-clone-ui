@@ -39,7 +39,7 @@ export default function Home() {
   const languages = useSelector((state) => state.languages);
   const minPrice = useSelector((state) => state.minPrice);
   const maxPrice = useSelector((state) => state.maxPrice);
-  // const shoudlRender = useState(false);
+  const shoudlRender = useState(false);
   // const searchParams = {
   //   minPrice: 0,
   //   maxPrice: 0,

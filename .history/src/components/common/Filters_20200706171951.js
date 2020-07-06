@@ -41,7 +41,6 @@ export default function Filters({ languageFilterList, filterByLanguage, filtered
   const handleChange = (e) => {
     setMinPrice(e.values[0]);
     setMaxPrice(e.values[1]);
-    console.log(e.values[0], e.values[1]);
     dispatch({ type: "FILTER", payload: { minPrice: e.values[0], maxPrice: e.values[1] } });
 
     filteredByPriceRange();

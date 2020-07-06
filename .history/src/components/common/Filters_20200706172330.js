@@ -39,9 +39,9 @@ export default function Filters({ languageFilterList, filterByLanguage, filtered
   };
 
   const handleChange = (e) => {
+    console.log(e);
     setMinPrice(e.values[0]);
     setMaxPrice(e.values[1]);
-    console.log(e.values[0], e.values[1]);
     dispatch({ type: "FILTER", payload: { minPrice: e.values[0], maxPrice: e.values[1] } });
 
     filteredByPriceRange();
@@ -75,7 +75,7 @@ export default function Filters({ languageFilterList, filterByLanguage, filtered
           <Multiselect options={timeOfDay} selectedValues="" onSelect="" displayValue="name" showCheckbox={true} placeholder="Time of day" closeOnSelect={false} avoidHighlightFirstOption={true} closeIcon="close" />
         </Col>
         <Col sm={4} className="mt-3">
-          <Rheostat min={1} max={100} values={[minPrice, maxPrice]} onChange={(e) => handleChange(e)} />
+          <Rheostat min={1} max={100} values={[minPrice, maxPrice]} onSliderDragEnd={(e) => handleChange(e)} />
           <h5>
             Min-Max: {minPrice} - {maxPrice}
           </h5>
