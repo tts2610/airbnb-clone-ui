@@ -4,7 +4,6 @@ import { Pagination } from "react-bootstrap";
 export default function CustomPagination({ handlePageClick, maxPages, active }) {
   const [pages, setPages] = useState([]);
   useEffect(() => {
-    console.log(maxPages);
     let arr = [];
     for (let number = 1; number <= maxPages; number++) {
       arr.push(

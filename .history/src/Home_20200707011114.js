@@ -42,8 +42,8 @@ export default function Home() {
 
   useEffect(() => {
     performFilter(searchParams);
-    console.log(totalPage);
-  }, [searchParams, totalPage]);
+    dispatch({ type: "FILTER", payload: { searchParams: { totalPage: totalPage } } });
+  }, [searchParams, dispatch, totalPage]);
 
   const handleShow = (e, type) => {
     e && e.preventDefault();
@@ -157,7 +157,7 @@ export default function Home() {
                 <ExpCard key={idx} {...item} />
               ))}
             </CardDeck>
-            <CustomPagination handlePageClick={handlePageClick} maxPages={totalPage} active={searchParams.page} />
+            <CustomPagination handlePageClick={handlePageClick} maxPages={searchParams.totalPage} active={searchParams.page} />
           </>
         ) : (
           <h1>Nothing to show</h1>

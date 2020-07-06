@@ -27,23 +27,28 @@ export default function Home() {
 
   // const [tagFilterList, setTagFilterList] = useState([]);
   const [data, setData] = useState([]);
-
+  const [activePage, setActivePage] = useState(1);
   const [totalPage, setTotalPage] = useState(0);
 
   const searchParams = useSelector((state) => state.searchParams);
 
+  const nextPage = () => {
+    setActivePage(activePage + 1);
+  };
+  const previousPage = () => {
+    setActivePage(activePage - 1);
+  };
+
   const performFilter = (params) => {
-    let searchUrl = process.env.REACT_APP_GET_EXP + `/search?priceMin=${params.minPrice ? params.minPrice : ""}&priceMax=${params.maxPrice ? params.maxPrice : ""}&languages=${params.languages}&tags=${params.tags}&page=${params.page}&perPage=12`;
+    let searchUrl = process.env.REACT_APP_GET_EXP + `/search?priceMin=${params.minPrice ? params.minPrice : ""}&priceMax=${params.maxPrice ? params.maxPrice : ""}&languages=${params.languages}&tags=${params.tags}&page=${activePage}&perPage=12`;
     axios.get(searchUrl).then(function (res) {
-      setTotalPage(res.data.data.pagination.totalPages);
       setData(res.data.data.experienceList);
     });
   };
 
   useEffect(() => {
     performFilter(searchParams);
-    console.log(totalPage);
-  }, [searchParams, totalPage]);
+  }, [searchParams]);
 
   const handleShow = (e, type) => {
     e && e.preventDefault();
@@ -140,6 +145,8 @@ export default function Home() {
 
   const handlePageClick = (e) => {
     const clickValue = e.target.offsetParent.getAttribute("data-page") ? e.target.offsetParent.getAttribute("data-page") : e.target.getAttribute("data-page");
+    console.log(clickValue);
+    setActivePage(clickValue);
     dispatch({ type: "FILTER", payload: { searchParams: { page: clickValue } } });
   };
 
@@ -157,7 +164,7 @@ export default function Home() {
                 <ExpCard key={idx} {...item} />
               ))}
             </CardDeck>
-            <CustomPagination handlePageClick={handlePageClick} maxPages={totalPage} active={searchParams.page} />
+            <CustomPagination handlePageClick={handlePageClick} nextPage={nextPage} previousPage={previousPage} maxPages={totalPage} active={activePage} />
           </>
         ) : (
           <h1>Nothing to show</h1>

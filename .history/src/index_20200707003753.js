@@ -9,7 +9,7 @@ import { createStore } from "redux";
 
 const initialState = {
   navigator: "",
-  searchParams: { minPrice: 1, maxPrice: 100, languages: [], tags: [], page: 1, perPage: 12, totalPage: 0 },
+  searchParams: { minPrice: 1, maxPrice: 100, languages: [], tags: [] },
   isHost: false,
 };
 

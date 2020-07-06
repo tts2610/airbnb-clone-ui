@@ -42,8 +42,7 @@ export default function Home() {
 
   useEffect(() => {
     performFilter(searchParams);
-    console.log(totalPage);
-  }, [searchParams, totalPage]);
+  }, [searchParams]);
 
   const handleShow = (e, type) => {
     e && e.preventDefault();

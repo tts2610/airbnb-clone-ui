@@ -42,8 +42,7 @@ export default function Home() {
 
   useEffect(() => {
     performFilter(searchParams);
-    console.log(totalPage);
-  }, [searchParams, totalPage]);
+  }, [searchParams]);
 
   const handleShow = (e, type) => {
     e && e.preventDefault();
@@ -140,6 +139,7 @@ export default function Home() {
 
   const handlePageClick = (e) => {
     const clickValue = e.target.offsetParent.getAttribute("data-page") ? e.target.offsetParent.getAttribute("data-page") : e.target.getAttribute("data-page");
+    console.log(clickValue);
     dispatch({ type: "FILTER", payload: { searchParams: { page: clickValue } } });
   };
 

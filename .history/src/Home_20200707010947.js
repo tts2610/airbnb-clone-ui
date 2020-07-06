@@ -35,15 +35,14 @@ export default function Home() {
   const performFilter = (params) => {
     let searchUrl = process.env.REACT_APP_GET_EXP + `/search?priceMin=${params.minPrice ? params.minPrice : ""}&priceMax=${params.maxPrice ? params.maxPrice : ""}&languages=${params.languages}&tags=${params.tags}&page=${params.page}&perPage=12`;
     axios.get(searchUrl).then(function (res) {
-      setTotalPage(res.data.data.pagination.totalPages);
+      dispatch({ type: "FILTER", payload: { searchParams: { totalPage: res.data.data.pagination.totalPages } } });
       setData(res.data.data.experienceList);
     });
   };
 
   useEffect(() => {
     performFilter(searchParams);
-    console.log(totalPage);
-  }, [searchParams, totalPage]);
+  }, [searchParams]);
 
   const handleShow = (e, type) => {
     e && e.preventDefault();
@@ -157,7 +156,7 @@ export default function Home() {
                 <ExpCard key={idx} {...item} />
               ))}
             </CardDeck>
-            <CustomPagination handlePageClick={handlePageClick} maxPages={totalPage} active={searchParams.page} />
+            <CustomPagination handlePageClick={handlePageClick} maxPages={searchParams.totalPage} active={searchParams.page} />
           </>
         ) : (
           <h1>Nothing to show</h1>

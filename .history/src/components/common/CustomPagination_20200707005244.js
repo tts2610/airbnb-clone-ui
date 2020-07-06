@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Pagination } from "react-bootstrap";
 
-export default function CustomPagination({ handlePageClick, maxPages, active }) {
+export default function CustomPagination({ handlePageClick, maxPages, active, nextPage, previousPage }) {
   const [pages, setPages] = useState([]);
   useEffect(() => {
-    console.log(maxPages);
     let arr = [];
     for (let number = 1; number <= maxPages; number++) {
       arr.push(
