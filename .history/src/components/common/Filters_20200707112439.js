@@ -108,10 +108,6 @@ export default function Filters() {
   // };
 
   const handleReset = () => {
-    setSelected([]);
-    setSelectedTags([]);
-    setMinPrice(0);
-    setMaxPrice(100);
     dispatch({ type: "FILTER", payload: { searchParams: { minPrice: 1, maxPrice: 100, languages: [], tags: [], page: 1, perPage: 12, totalPage: 0 }, isFiltering: false } });
   };
 

@@ -80,27 +80,27 @@ export default function Filters() {
 
   const handleRemoveLanguage = (selectedList) => {
     setSelected(selectedList);
-    dispatch({ type: "FILTER", payload: { searchParams: { languages: selectedList.map((e) => languageConvert[e.name]), perPage: undefined }, isFiltering: true } });
+    dispatch({ type: "FILTER", payload: { searchParams: { languages: selectedList.map((e) => languageConvert[e.name]) }, isFiltering: true } });
     // filterByLanguage();
   };
 
   const handleSelectTag = (selectedList) => {
     setSelectedTags(selectedList);
     console.log(selectedList);
-    dispatch({ type: "FILTER", payload: { searchParams: { tags: selectedList.map((e) => e.name), perPage: undefined }, isFiltering: true } });
+    dispatch({ type: "FILTER", payload: { searchParams: { tags: selectedList.map((e) => e.name) }, isFiltering: true } });
     // filterByLanguage();
   };
 
   const handleRemoveTag = (selectedList) => {
     setSelectedTags(selectedList);
-    dispatch({ type: "FILTER", payload: { searchParams: { tags: selectedList.map((e) => e.name), perPage: undefined }, isFiltering: true } });
+    dispatch({ type: "FILTER", payload: { searchParams: { tags: selectedList.map((e) => e.name) }, isFiltering: true } });
     // filterByLanguage();
   };
 
   const handleChange = (e) => {
     setMinPrice(e.values[0]);
     setMaxPrice(e.values[1]);
-    dispatch({ type: "FILTER", payload: { searchParams: { minPrice: e.values[0], maxPrice: e.values[1], perPage: undefined }, isFiltering: true } });
+    dispatch({ type: "FILTER", payload: { searchParams: { minPrice: e.values[0], maxPrice: e.values[1] }, isFiltering: true } });
   };
 
   // const filterByRating = (e, num) => {
@@ -108,10 +108,6 @@ export default function Filters() {
   // };
 
   const handleReset = () => {
-    setSelected([]);
-    setSelectedTags([]);
-    setMinPrice(0);
-    setMaxPrice(100);
     dispatch({ type: "FILTER", payload: { searchParams: { minPrice: 1, maxPrice: 100, languages: [], tags: [], page: 1, perPage: 12, totalPage: 0 }, isFiltering: false } });
   };
 
