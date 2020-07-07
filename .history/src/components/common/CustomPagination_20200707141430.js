@@ -19,7 +19,7 @@ export default function CustomPagination({ handlePageClick, maxPages, active }) 
       <Pagination style={{ justifyContent: "center" }} onClick={(e) => handlePageClick(e)}>
         <Pagination.First disabled={pages.length === 1} key={1} data-page={1} />
         {pages}
-        <Pagination.Last disabled={pages.length === 1} key={maxPages} data-page={maxPages} />
+        <Pagination.Last disabled={pages.length === 1} key={maxPages} data-page={3} />
       </Pagination>
     </div>
   );
