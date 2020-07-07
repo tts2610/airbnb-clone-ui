@@ -89,10 +89,6 @@ export default function Filters() {
     dispatch({ type: "FILTER", payload: { searchParams: { minPrice: e.values[0], maxPrice: e.values[1] } } });
   };
 
-  // const filterByRating = (e, num) => {
-  //   dispatch({ type: "FILTER", payload: { searchParams: { averageRating: num } } });
-  // };
-
   const handleReset = () => {
     dispatch({ type: "FILTER", payload: { searchParams: { minPrice: 1, maxPrice: 100, languages: [], tags: [], page: 1, perPage: 12, totalPage: 0 } } });
   };
@@ -140,33 +136,33 @@ export default function Filters() {
           </Button>
         </Col>
       </Row>
-      {/* <Row className="mt-3" style={{ flexDirection: "column", alignItems: "center", cursor: "pointer" }}>
-        <div onClick={(e) => filterByRating(e, 1)}>
+      <Row style={{ flexDirection: "column", alignItems: "center" }}>
+        <div>
           <i className="fas fa-star"></i> 1 star
         </div>
-        <div onClick={(e) => filterByRating(e, 2)}>
+        <div>
           <i className="fas fa-star"></i>
           <i className="fas fa-star"></i> 2 stars
         </div>
-        <div onClick={(e) => filterByRating(e, 3)}>
+        <div>
           <i className="fas fa-star"></i>
           <i className="fas fa-star"></i>
           <i className="fas fa-star"></i> 3 stars
         </div>
-        <div onClick={(e) => filterByRating(e, 4)}>
+        <div>
           <i className="fas fa-star"></i>
           <i className="fas fa-star"></i>
           <i className="fas fa-star"></i>
           <i className="fas fa-star"></i> 4 stars
         </div>
-        <div onClick={(e) => filterByRating(e, 5)}>
+        <div>
           <i className="fas fa-star"></i>
           <i className="fas fa-star"></i>
           <i className="fas fa-star"></i>
           <i className="fas fa-star"></i>
           <i className="fas fa-star"></i> 5 stars
         </div>
-      </Row> */}
+      </Row>
     </Container>
   );
 }

@@ -89,9 +89,9 @@ export default function Filters() {
     dispatch({ type: "FILTER", payload: { searchParams: { minPrice: e.values[0], maxPrice: e.values[1] } } });
   };
 
-  // const filterByRating = (e, num) => {
-  //   dispatch({ type: "FILTER", payload: { searchParams: { averageRating: num } } });
-  // };
+  const filterByRating = (e, num) => {
+    console.log(num);
+  };
 
   const handleReset = () => {
     dispatch({ type: "FILTER", payload: { searchParams: { minPrice: 1, maxPrice: 100, languages: [], tags: [], page: 1, perPage: 12, totalPage: 0 } } });
@@ -140,7 +140,7 @@ export default function Filters() {
           </Button>
         </Col>
       </Row>
-      {/* <Row className="mt-3" style={{ flexDirection: "column", alignItems: "center", cursor: "pointer" }}>
+      <Row className="mt-5" style={{ alignItems: "center", cursor: "pointer" }}>
         <div onClick={(e) => filterByRating(e, 1)}>
           <i className="fas fa-star"></i> 1 star
         </div>
@@ -166,7 +166,7 @@ export default function Filters() {
           <i className="fas fa-star"></i>
           <i className="fas fa-star"></i> 5 stars
         </div>
-      </Row> */}
+      </Row>
     </Container>
   );
 }
