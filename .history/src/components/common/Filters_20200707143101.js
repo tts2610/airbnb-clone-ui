@@ -66,7 +66,7 @@ export default function Filters() {
           getTagList(tempData);
         });
     if (selectedOption.length === 0 && selectedTags.length === 0 && minPrice === 1 && maxPrice === 100) {
-      dispatch({ type: "FILTER", payload: { searchParams: { minPrice: 1, maxPrice: 100, languages: [], tags: [], page: 1, perPage: 8, totalPage: 0 }, isFiltering: false } });
+      dispatch({ type: "FILTER", payload: { searchParams: { minPrice: 1, maxPrice: 100, languages: [], tags: [], page: 1, perPage: 9, totalPage: 0 }, isFiltering: false } });
     }
   }, [selectedOption, selectedTags, minPrice, maxPrice, dispatch]);
 
@@ -106,7 +106,7 @@ export default function Filters() {
     setSelectedTags([]);
     setMinPrice(0);
     setMaxPrice(100);
-    dispatch({ type: "FILTER", payload: { searchParams: { minPrice: 1, maxPrice: 100, languages: [], tags: [], page: 1, perPage: 8, totalPage: 0 }, isFiltering: false } });
+    dispatch({ type: "FILTER", payload: { searchParams: { minPrice: 1, maxPrice: 100, languages: [], tags: [], page: 1, perPage: 9, totalPage: 0 }, isFiltering: false } });
   };
 
   return (

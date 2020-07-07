@@ -36,7 +36,7 @@ export default function Home() {
   const performFilter = (params) => {
     let searchUrl =
       process.env.REACT_APP_GET_EXP +
-      `/search?priceMin=${params.minPrice ? params.minPrice : ""}&priceMax=${params.maxPrice ? params.maxPrice : ""}&languages=${params.languages}&tags=${params.tags}&averageRating=${params.averageRating}&page=${params.page}&&perPage=8`;
+      `/search?priceMin=${params.minPrice ? params.minPrice : ""}&priceMax=${params.maxPrice ? params.maxPrice : ""}&languages=${params.languages}&tags=${params.tags}&averageRating=${params.averageRating}&page=${params.page}&&perPage=9`;
     console.log(searchUrl);
     axios.get(searchUrl).then(function (res) {
       setTotalPage(res.data.data.pagination.totalPages);
