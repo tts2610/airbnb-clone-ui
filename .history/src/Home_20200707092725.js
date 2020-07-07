@@ -39,7 +39,7 @@ export default function Home() {
     console.log(searchUrl);
     axios.get(searchUrl).then(function (res) {
       setTotalPage(Math.ceil(res.data.data.experienceList.length / 12));
-      console.log(res.data.data.experienceList.length);
+      // console.log(res.data.data.experienceList.length/12);
       setData(res.data.data.experienceList);
     });
   };

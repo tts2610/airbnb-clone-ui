@@ -38,8 +38,7 @@ export default function Home() {
       `/search?priceMin=${params.minPrice ? params.minPrice : ""}&priceMax=${params.maxPrice ? params.maxPrice : ""}&languages=${params.languages}&tags=${params.tags}&averageRating=${params.averageRating}&page=${params.page}&&perPage=12`;
     console.log(searchUrl);
     axios.get(searchUrl).then(function (res) {
-      setTotalPage(Math.ceil(res.data.data.experienceList.length / 12));
-      console.log(res.data.data.experienceList.length);
+      console.log(res.data.data.pagination.totalPages);
       setData(res.data.data.experienceList);
     });
   };
