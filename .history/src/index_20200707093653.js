@@ -27,8 +27,6 @@ function reducer(state = initialState, action) {
   } else if (action.type === "VERIFYHOST") {
     state.isHost = true;
   }
-
-  console.log(state.isFiltering);
   return { ...state };
 }
 

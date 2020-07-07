@@ -46,9 +46,9 @@ export default function Home() {
   };
 
   useEffect(() => {
-    performFilter(searchParams);
+    // performFilter(searchParams);
     // console.log(totalPage);
-  }, [searchParams]);
+  });
 
   const handleShow = (e, type) => {
     e && e.preventDefault();
@@ -152,9 +152,9 @@ export default function Home() {
 
   return (
     <>
-      <CustomNavbar handleShow={handleShow} />
+      {/* <CustomNavbar handleShow={handleShow} />
       <CustomJumbotron />
-      <Filters />
+      <Filters data={data} />
       <Container className="mt-5">
         {data.length !== 0 ? (
           <>
@@ -174,6 +174,6 @@ export default function Home() {
       </Container>
       <LoginModal show={showLogin} handleClose={handleClose} loginUser={loginUser} showSpinner={showLoginSpinner} error={errorLogin} loginNavigator={loginNavigator} />
       <SignupModal show={showSignUp} handleClose={handleClose} signUpUser={signUpUser} showSpinner={showSignUpSpinner} error={errorSignUp} />
-    </>
+    </> */}
   );
 }

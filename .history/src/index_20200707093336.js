@@ -23,12 +23,9 @@ function reducer(state = initialState, action) {
       newParams[key] = value;
     }
     state.searchParams = { ...newParams };
-    state.isFiltering = action.payload.isFiltering;
   } else if (action.type === "VERIFYHOST") {
     state.isHost = true;
   }
-
-  console.log(state.isFiltering);
   return { ...state };
 }
 

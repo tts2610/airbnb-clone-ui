@@ -24,23 +24,23 @@ export default function AddExperiences() {
   const [groupSize, setGroupSize] = useState(5);
 
   const [exp, setExp] = useState();
-  useEffect(() => {
-    // dispatch({ type: "ADDNAVIGATOR", payload: { url: "" } });
-    axios.get(process.env.REACT_APP_GET_EXP + `/${expId}`).then(function (res) {
-      console.log(res.data.data.experience);
-      setExp(res.data.data.experience);
-      const { title, description, language, duration, price, images, location, groupSize } = res.data.data.experience;
-      setTitle(title);
-      setDescription(description);
-      setLanguage(language);
-      setDuration(duration);
-      setPrice(price);
-      setImages(images);
-      setLocation(location);
-      setGroupSize(groupSize);
-      // setTags(tags);
-    });
-  }, []);
+  // useEffect(() => {
+  //   // dispatch({ type: "ADDNAVIGATOR", payload: { url: "" } });
+  //   axios.get(process.env.REACT_APP_GET_EXP + `/${expId}`).then(function (res) {
+  //     console.log(res.data.data.experience);
+  //     setExp(res.data.data.experience);
+  //     const { title, description, language, duration, price, images, location, groupSize } = res.data.data.experience;
+  //     setTitle(title);
+  //     setDescription(description);
+  //     setLanguage(language);
+  //     setDuration(duration);
+  //     setPrice(price);
+  //     setImages(images);
+  //     setLocation(location);
+  //     setGroupSize(groupSize);
+  //     // setTags(tags);
+  //   });
+  // }, []);
   // const clearForm = () => {
   //   setTitle("");
   //   setDescription("");

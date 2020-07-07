@@ -10,7 +10,6 @@ const languageConvert = {
   Korean: "ko",
   English: "en",
 };
-let tempData;
 function getKeyByValue(object, value) {
   return Object.keys(object).find((key) => object[key] === value);
 }
@@ -55,17 +54,12 @@ export default function Filters() {
   useEffect(() => {
     axios
       .get(process.env.REACT_APP_GET_EXP)
+      .then((res) => setData(res.data.data.experienceList))
       .then(function (res) {
-        setData(res.data.data.experienceList);
-        tempData = res.data.data.experienceList;
-      })
-      .then(function (res) {
-        getLanguageList(tempData);
-        getTagList(tempData);
+        getLanguageList(data);
+        getTagList(data);
       });
-    // getLanguageList(data);
-    // getTagList(data);
-  }, []);
+  }, [data]);
   const [selectedOption, setSelected] = useState([]);
   const [selectedTags, setSelectedTags] = useState([]);
   const handleSelectLanguage = (selectedList) => {

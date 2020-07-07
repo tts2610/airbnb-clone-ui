@@ -31,7 +31,7 @@ export default function Home() {
   const [totalPage, setTotalPage] = useState(0);
 
   const searchParams = useSelector((state) => state.searchParams);
-  const isFiltering = useSelector((state) => state.isFiltering);
+  const [isFiltering, setIsFiltering] = useState(searchParams.isFiltering);
 
   const performFilter = (params) => {
     let searchUrl =
@@ -154,7 +154,7 @@ export default function Home() {
     <>
       <CustomNavbar handleShow={handleShow} />
       <CustomJumbotron />
-      <Filters />
+      <Filters data={data} />
       <Container className="mt-5">
         {data.length !== 0 ? (
           <>

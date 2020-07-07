@@ -10,7 +10,7 @@ import { createStore } from "redux";
 const initialState = {
   navigator: "",
   searchParams: { minPrice: 1, maxPrice: 100, languages: [], tags: [], page: 1, perPage: 12, totalPage: 0 },
-  isFiltering: false,
+  isFiltering:false
   isHost: false,
 };
 
@@ -23,12 +23,9 @@ function reducer(state = initialState, action) {
       newParams[key] = value;
     }
     state.searchParams = { ...newParams };
-    state.isFiltering = action.payload.isFiltering;
   } else if (action.type === "VERIFYHOST") {
     state.isHost = true;
   }
-
-  console.log(state.isFiltering);
   return { ...state };
 }
 

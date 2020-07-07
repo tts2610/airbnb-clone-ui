@@ -10,7 +10,6 @@ const languageConvert = {
   Korean: "ko",
   English: "en",
 };
-let tempData;
 function getKeyByValue(object, value) {
   return Object.keys(object).find((key) => object[key] === value);
 }
@@ -23,49 +22,40 @@ export default function Filters() {
   const [data, setData] = useState([]);
 
   const dispatch = useDispatch();
-  const getLanguageList = (data) => {
-    let arr = new Set();
-    for (let index = 0; index < data.length; index++) {
-      const element = data[index];
-      element.languages.forEach((item) => arr.add(getKeyByValue(languageConvert, item)));
-    }
-    let newLangList = Array.from(arr).reduce((acc, item, indx) => {
-      let obj = { name: item, id: indx };
-      acc.push(obj);
-      return acc;
-    }, []);
-    setLanguages(newLangList);
-  };
 
-  const getTagList = (data) => {
-    let arr = new Set();
-    for (let index = 0; index < data.length; index++) {
-      const element = data[index];
-      element.tags.forEach((item) => arr.add(item.tag));
-    }
-
-    let newTagList = Array.from(arr).reduce((acc, item, indx) => {
-      let obj = { name: item, id: indx };
-      acc.push(obj);
-      return acc;
-    }, []);
-
-    setTags(newTagList);
-  };
   useEffect(() => {
-    axios
-      .get(process.env.REACT_APP_GET_EXP)
-      .then(function (res) {
-        setData(res.data.data.experienceList);
-        tempData = res.data.data.experienceList;
-      })
-      .then(function (res) {
-        getLanguageList(tempData);
-        getTagList(tempData);
-      });
-    // getLanguageList(data);
-    // getTagList(data);
-  }, []);
+    axios.get(process.env.REACT_APP_GET_EXP).then((res) => setData(res.data.data.experienceList));
+    const getLanguageList = () => {
+      let arr = new Set();
+      for (let index = 0; index < data.length; index++) {
+        const element = data[index];
+        element.languages.forEach((item) => arr.add(getKeyByValue(languageConvert, item)));
+      }
+      let newLangList = Array.from(arr).reduce((acc, item, indx) => {
+        let obj = { name: item, id: indx };
+        acc.push(obj);
+        return acc;
+      }, []);
+      setLanguages(newLangList);
+    };
+    const getTagList = () => {
+      let arr = new Set();
+      for (let index = 0; index < data.length; index++) {
+        const element = data[index];
+        element.tags.forEach((item) => arr.add(item.tag));
+      }
+
+      let newTagList = Array.from(arr).reduce((acc, item, indx) => {
+        let obj = { name: item, id: indx };
+        acc.push(obj);
+        return acc;
+      }, []);
+
+      setTags(newTagList);
+    };
+    getLanguageList();
+    getTagList();
+  }, [data]);
   const [selectedOption, setSelected] = useState([]);
   const [selectedTags, setSelectedTags] = useState([]);
   const handleSelectLanguage = (selectedList) => {

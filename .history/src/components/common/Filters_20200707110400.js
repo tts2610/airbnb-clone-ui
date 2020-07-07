@@ -10,10 +10,11 @@ const languageConvert = {
   Korean: "ko",
   English: "en",
 };
-let tempData;
 function getKeyByValue(object, value) {
   return Object.keys(object).find((key) => object[key] === value);
 }
+
+const tempData;
 
 export default function Filters() {
   const [tags, setTags] = useState([]);
@@ -53,16 +54,10 @@ export default function Filters() {
     setTags(newTagList);
   };
   useEffect(() => {
-    axios
-      .get(process.env.REACT_APP_GET_EXP)
-      .then(function (res) {
-        setData(res.data.data.experienceList);
-        tempData = res.data.data.experienceList;
-      })
-      .then(function (res) {
-        getLanguageList(tempData);
-        getTagList(tempData);
-      });
+    axios.get(process.env.REACT_APP_GET_EXP).then(function(res){
+      setData(res.data.data.experienceList);
+      tempData=res.data.data.experienceList;
+    }).then(res=>getLanguageList()).then(res=>getTagList());
     // getLanguageList(data);
     // getTagList(data);
   }, []);

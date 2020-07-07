@@ -46,9 +46,9 @@ export default function Home() {
   };
 
   useEffect(() => {
-    performFilter(searchParams);
+    // performFilter(searchParams);
     // console.log(totalPage);
-  }, [searchParams]);
+  });
 
   const handleShow = (e, type) => {
     e && e.preventDefault();
@@ -154,7 +154,7 @@ export default function Home() {
     <>
       <CustomNavbar handleShow={handleShow} />
       <CustomJumbotron />
-      <Filters />
+      {/* <Filters /> */}
       <Container className="mt-5">
         {data.length !== 0 ? (
           <>

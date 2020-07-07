@@ -31,7 +31,6 @@ export default function Home() {
   const [totalPage, setTotalPage] = useState(0);
 
   const searchParams = useSelector((state) => state.searchParams);
-  const isFiltering = useSelector((state) => state.isFiltering);
 
   const performFilter = (params) => {
     let searchUrl =
@@ -154,7 +153,7 @@ export default function Home() {
     <>
       <CustomNavbar handleShow={handleShow} />
       <CustomJumbotron />
-      <Filters />
+      <Filters data={data} />
       <Container className="mt-5">
         {data.length !== 0 ? (
           <>
@@ -164,7 +163,7 @@ export default function Home() {
                 <ExpCard key={idx} {...item} />
               ))}
             </CardDeck>
-            {!isFiltering && <CustomPagination handlePageClick={handlePageClick} maxPages={totalPage} active={searchParams.page} />}
+            {!searchParams.isFiltering && <CustomPagination handlePageClick={handlePageClick} maxPages={totalPage} active={searchParams.page} />}
           </>
         ) : (
           <h1>Nothing to show</h1>

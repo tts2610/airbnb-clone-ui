@@ -59,10 +59,8 @@ export default function Filters() {
         setData(res.data.data.experienceList);
         tempData = res.data.data.experienceList;
       })
-      .then(function (res) {
-        getLanguageList(tempData);
-        getTagList(tempData);
-      });
+      .then((res) => getLanguageList(tempData))
+      .then((res) => getTagList(tempData));
     // getLanguageList(data);
     // getTagList(data);
   }, []);

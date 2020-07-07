@@ -10,7 +10,6 @@ const languageConvert = {
   Korean: "ko",
   English: "en",
 };
-let tempData;
 function getKeyByValue(object, value) {
   return Object.keys(object).find((key) => object[key] === value);
 }
@@ -23,7 +22,7 @@ export default function Filters() {
   const [data, setData] = useState([]);
 
   const dispatch = useDispatch();
-  const getLanguageList = (data) => {
+  const getLanguageList = () => {
     let arr = new Set();
     for (let index = 0; index < data.length; index++) {
       const element = data[index];
@@ -37,7 +36,7 @@ export default function Filters() {
     setLanguages(newLangList);
   };
 
-  const getTagList = (data) => {
+  const getTagList = () => {
     let arr = new Set();
     for (let index = 0; index < data.length; index++) {
       const element = data[index];
@@ -55,17 +54,12 @@ export default function Filters() {
   useEffect(() => {
     axios
       .get(process.env.REACT_APP_GET_EXP)
+      .then((res) => setData(res.data.data.experienceList))
       .then(function (res) {
-        setData(res.data.data.experienceList);
-        tempData = res.data.data.experienceList;
-      })
-      .then(function (res) {
-        getLanguageList(tempData);
-        getTagList(tempData);
+        getLanguageList();
+        getTagList();
       });
-    // getLanguageList(data);
-    // getTagList(data);
-  }, []);
+  });
   const [selectedOption, setSelected] = useState([]);
   const [selectedTags, setSelectedTags] = useState([]);
   const handleSelectLanguage = (selectedList) => {

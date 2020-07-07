@@ -154,7 +154,7 @@ export default function Home() {
     <>
       <CustomNavbar handleShow={handleShow} />
       <CustomJumbotron />
-      <Filters />
+      <Filters data={data} />
       <Container className="mt-5">
         {data.length !== 0 ? (
           <>
